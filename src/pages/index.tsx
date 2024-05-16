@@ -26,11 +26,6 @@ import {
 import VanillaTilt from "vanilla-tilt";
 import {motion} from "framer-motion";
 
-const aboutStats = [
-    {label: "Years of experience", value: "3+"},
-    {label: "Technologies mastered", value: "7+"},
-    {label: "Companies worked with", value: "4+"},
-];
 
 const projects = [
     {
@@ -77,6 +72,12 @@ const projects = [
     },
 ];
 
+const aboutStats = [
+    {label: "Years of experience", value: "3+"},
+    {label: "Projects handled", value: `${projects.length}`},
+    {label: "Companies worked with", value: "4+"},
+];
+
 const services = [
     {
         service: "Mobile Development",
@@ -91,10 +92,16 @@ const services = [
         icon: MonitorSmartphone,
     },
     // {
-    //   service: "Backend Development",
-    //   description:
-    //     "Developing robust, scalable server-side logic for a wide range of applications.",
-    //   icon: Eye,
+    //     service: "UX Design",
+    //     description:
+    //         "Building intuitive, user-centric designs that drive engagement and conversion.",
+    //     icon: Frame,
+    // },
+    // {
+    //     service: "Backend Development",
+    //     description:
+    //         "Developing robust, scalable server-side logic for a wide range of applications.",
+    //     icon: Eye,
     // },
 ];
 
@@ -464,9 +471,30 @@ export default function Home() {
                             I&apos;m currently available for freelance work and open to
                             discussing new projects.
                         </p>
-                        <Link href="mailto:d.ajiprasetyo43@gmail.com" passHref>
-                            <Button className="mt-6">Get in touch</Button>
-                        </Link>
+                        <div className="flex">
+                            <Link href="mailto:d.ajiprasetyo43@gmail.com" passHref>
+                                <Button className="mt-6">
+                                    <Image src='/assets/mail.svg' alt="Mail" width={20} height={20}/>
+                                </Button>
+                            </Link>
+
+                            <Button className="mt-6 ml-4"
+                                    onClick={() => window.open('https://t.me/Aprxty', '_blank')}>
+                                <Image src='/assets/telegram.svg' alt="Telegram" width={20} height={20}/>
+                            </Button>
+
+                            <Button className="mt-6 ml-4"
+                                    onClick={() => window.open('https://www.linkedin.com/in/ajiprasetyo43/', '_blank')}>
+                                <Image src='/assets/linkedin.svg' alt="LinkedIn" width={20} height={20}/>
+                            </Button>
+
+                            <Button className="mt-6 ml-4"
+                                    onClick={() => window.open('https://github.com/aprxty3', '_blank')}>
+                                <Image src='/assets/github.svg' alt="Github" width={20} height={20}/>
+                            </Button>
+
+
+                        </div>
                     </div>
                 </section>
             </div>
