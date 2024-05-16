@@ -35,6 +35,18 @@ const aboutStats = [
 
 const projects = [
   {
+  title: "Checkervisor",
+  description: "Checkervisor is app for check original product",
+  image: "/assets/checkvisor.png",
+  href: "https://www.instagram.com/checkervisor/",
+},
+  {
+    title: "SWUSHD Kitchen",
+    description: "SWUSHD Kitchen is a mobile apps for ordering food",
+    image: "/assets/swushd.png",
+    href: "https://swushd.com/",
+  },
+  {
     title: "This website",
     description: "My personal website",
     image: "/assets/web_porto.png",
@@ -243,13 +255,28 @@ export default function Home() {
             <h2 className="py-16  pb-2 text-3xl font-light leading-normal tracking-tighter text-foreground xl:text-[40px]">
               I&apos;m an experienced mobile dev engineer proficient in{" "}
               <Link
-                href="https://create.t3.gg/"
+                href="https://flutter.dev/"
                 target="_blank"
                 className="underline"
               >
-                Flutter and Kotlin
+                Flutter
               </Link>{" "}
-              since 2021. My experience spans from startups to mid-sized
+              and {" "}
+              <Link
+                href="https://kotlinlang.org/"
+                target="_blank"
+                className="underline"
+              >
+                Kotlin
+              </Link>{" "}
+              since 2021 and want Expand on{" "} <Link
+                href="https://www.swift.org/"
+                target="_blank"
+                className="underline"
+              >
+                Swift
+              </Link>{""}
+              . My experience spans from startups to mid-sized
               companies, where I&apos;ve been instrumental in the entire product
               design process; from ideation and wireframing, through
               prototyping, to the delivery of the final product, all while
@@ -298,8 +325,8 @@ export default function Home() {
               Streamlined digital experiences.
             </h2>
             <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
-              I&apos;ve worked on a variety of projects, from small websites to
-              large-scale web applications. Here are some of my favorites:
+              I&apos;ve worked on a variety of projects, from small to
+              large-scale mobile applications. Here are some of my projects:
             </p>
 
             {/* Carousel */}
