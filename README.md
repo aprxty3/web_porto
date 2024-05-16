@@ -11,7 +11,7 @@ Follow the steps below to clone and run this project on your local system:
 
 ```bash
 # Clone the repository
-$ git clone https://github.com/aprxty3/portfolio.git
+$ git clone https://github.com/aprxty3/web_porto.git
 
 # Navigate to the project directory
 $ cd portfolio
