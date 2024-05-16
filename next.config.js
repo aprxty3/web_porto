@@ -18,7 +18,6 @@ const withPWA = WithPWA({
  */
 // @ts-ignore
 const config = withPWA({
-    basePath: "/2048-in-react",
     output: "export",
     reactStrictMode: true,
 
