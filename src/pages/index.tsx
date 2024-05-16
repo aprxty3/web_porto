@@ -6,7 +6,6 @@ import {
   ChevronRight,
   Code2,
   Frame,
-  SearchCheck,
   Eye,
   MonitorSmartphone,
 } from "lucide-react";
@@ -62,21 +61,15 @@ const services = [
     icon: Code2,
   },
   {
-    service: "UX Design",
-    description:
-      "Building intuitive, user-centric designs that drive engagement and conversion.",
-    icon: Frame,
-  },
-  {
     service: "Responsive Design",
     description:
-      "Designing websites that look and perform equally well on all devices and screen sizes.",
+      "Designing apps that look and perform equally well on Android and iOS.",
     icon: MonitorSmartphone,
   },
   {
     service: "Backend Development",
     description:
-      "Developing robust, scalable server-side logic for a wide range of web applications.",
+      "Developing robust, scalable server-side logic for a wide range of applications.",
     icon: Eye,
   },
 ];
