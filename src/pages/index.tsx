@@ -82,7 +82,7 @@ const services = [
     {
         service: "Mobile Development",
         description:
-            "Creating stellar user interfaces and web experiences using the latest technologies.",
+            "Creating stellar user interfaces and mobile experiences using the latest technologies.",
         icon: Code2,
     },
     {
