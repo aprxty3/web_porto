@@ -38,7 +38,7 @@ const projects = [
     title: "This website",
     description: "My personal website",
     image: "/assets/web_porto.png",
-    href: "https://github.com/aprxty3/portfolio",
+    href: "https://github.com/aprxty3/web_porto",
   },
 ];
 
