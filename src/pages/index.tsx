@@ -28,11 +28,17 @@ import {motion} from "framer-motion";
 
 const aboutStats = [
     {label: "Years of experience", value: "3+"},
-    {label: "Technologies mastered", value: "6+"},
+    {label: "Technologies mastered", value: "7+"},
     {label: "Companies worked with", value: "4+"},
 ];
 
 const projects = [
+    {
+        title: "Ai Care Partner",
+        description: "Ai Care for Partners",
+        image: "/assets/partners.png",
+        href: "https://play.google.com/store/apps/details?id=net.atmatech.hcp.doctor",
+    },
     {
         title: "Ai Care User",
         description: "Ai Care a healthcare app",
