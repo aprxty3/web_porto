@@ -30,6 +30,7 @@ const config = withPWA({
     //   locales: ["en"],
     //   defaultLocale: "en",
     // },
+    images: {unoptimized: true},
 });
 
 
