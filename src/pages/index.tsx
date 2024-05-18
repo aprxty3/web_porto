@@ -105,6 +105,35 @@ const services = [
     // },
 ];
 
+const experiences = [
+    {
+        companyName: "PT. Digital Sekuriti Indonesia",
+        jobType: "Full-time",
+        jobTitle: "Mobile Developer",
+        duration: "2022 - Present",
+        description:
+            "Developed and maintained mobile applications company products, like Callink, Ai Care, and AI Care for Partners with GetX State Management and DDD Modular Clean Architecture. also, I'm responsible for research any tools or newest of technology to apply or implement on the projects",
+
+    },
+    {
+        companyName: "CV. Karomap Semesta",
+        jobType: "Freelance",
+        jobTitle: "Flutter Developer",
+        duration: "Aug 2023 - Jan 2024",
+        description:
+            "Development mobile apps who named Padat Karya Mangrove, this app is monitoring mangrove in Indonesia. I'm responsible for developing the app from scratch to production",
+    },
+
+    {
+        companyName: "SWUSHD Ltd",
+        jobType: "Freelance",
+        jobTitle: "Flutter Developer",
+        duration: "Mar - July 2023",
+        description:
+            "Fix and solve bugs on the SWUSHD Kitchen app, implement Github Action for CI/CD, also integrated the apps ith Stipe for payment gateway",
+    },
+];
+
 export default function Home() {
     const refScrollContainer = useRef(null);
     const [isScrolled, setIsScrolled] = useState<boolean>(false);
@@ -318,6 +347,55 @@ export default function Home() {
                                     <span className="tracking-tight text-muted-foreground xl:text-lg">
                     {stat.label}
                   </span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Experiences */}
+                <section id="projects" data-scroll-section>
+                    {/* Gradient */}
+                    <div className="relative isolate -z-10">
+                        <div
+                            className="absolute inset-x-0 -top-40 transform-gpu overflow-hidden blur-[100px] sm:-top-80 lg:-top-60"
+                            aria-hidden="true"
+                        >
+                            <div
+                                className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-primary via-primary to-secondary opacity-10 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+                                style={{
+                                    clipPath:
+                                        "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+                                }}
+                            />
+                        </div>
+                    </div>
+                    <div data-scroll data-scroll-speed=".4" className="my-64">
+            <span className="text-gradient clash-grotesk text-sm font-semibold tracking-tighter">
+              ✨ Experiences
+            </span>
+                        <h2 className="mt-3 text-4xl font-semibold tracking-tight tracking-tighter xl:text-6xl">
+                            Work experiences.
+                        </h2>
+                        <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
+                            I&apos;ve worked on a variety of jobs, from :
+                            {/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
+                        </p>
+                        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+                            {experiences.map((experience, index) => (
+                                <div
+                                    key={index}
+                                    className="flex flex-col items-start rounded-md bg-white/5 p-14 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md"
+                                >
+                                    <h3 className="text-lg tracking-tight text-foreground">
+                                        {experience.jobTitle}
+                                        <span
+                                            className="text-gray-500  ml-2">({experience.jobType || "Placeholder"})</span>
+
+                                    </h3>
+                                    <p className="mt-2 tracking-tighter text-muted-foreground">{experience.companyName}</p>
+                                    <p className="mt-2 tracking-tighter text-muted-foreground">{experience.duration}</p>
+                                    <p className="mt-2 tracking-tighter text-muted-foreground">{experience.description}</p>
                                 </div>
                             ))}
                         </div>
