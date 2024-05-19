@@ -354,7 +354,7 @@ export default function Home() {
                 </section>
 
                 {/* Experiences */}
-                <section id="projects" data-scroll-section>
+                <section id="experiences" data-scroll-section>
                     {/* Gradient */}
                     <div className="relative isolate -z-10">
                         <div
@@ -381,7 +381,7 @@ export default function Home() {
                             I&apos;ve worked on a variety of jobs, from :
                             {/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
                         </p>
-                        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+                        <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2">
                             {experiences.map((experience, index) => (
                                 <div
                                     key={index}

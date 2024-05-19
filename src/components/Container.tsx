@@ -39,7 +39,7 @@ const variants = {
 const navLinks = [
     {href: "#home", text: "Home"},
     {href: "#about", text: "About"},
-    // {href: "#experiences", text: "Experiences"},
+    {href: "#experiences", text: "Experiences"},
     {href: "#projects", text: "Projects"},
     {href: "#services", text: "Services"},
 ];
@@ -200,7 +200,7 @@ export default function Container(props: ContainerProps) {
                                 {/* Links */}
                                 <ul className="flex min-h-fit w-full flex-col items-start space-y-6 px-[22px] py-[58px]">
                                     {navLinks.map((link, i) => (
-                                        <button title="_" key={link.href} onClick={() => setIsOpen(false)}>
+                                        <button key={link.href} onClick={() => setIsOpen(false)}>
                                             <NavItem
                                                 href={link.href}
                                                 text={link.text}
