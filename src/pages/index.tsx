@@ -31,7 +31,7 @@ const projects = [
     {
         title: "Ai Care Partner",
         description: "Ai Care for Partners",
-        image: "/assets/partners.png",
+        image: "/assets/aicare_partner.jpeg",
         href: "https://play.google.com/store/apps/details?id=net.atmatech.hcp.doctor",
     },
     {
@@ -52,12 +52,12 @@ const projects = [
         image: "/assets/pkm.png",
         href: "https://www.karomap.com/",
     },
-    {
-        title: "Checkervisor",
-        description: "Checkervisor is app for check original product",
-        image: "/assets/checkvisor.png",
-        href: "https://www.instagram.com/checkervisor/",
-    },
+    // {
+    //     title: "Checkervisor",
+    //     description: "Checkervisor is app for check original product",
+    //     image: "/assets/checkvisor.png",
+    //     href: "https://www.instagram.com/checkervisor/",
+    // },
     {
         title: "SWUSHD Kitchen",
         description: "SWUSHD Kitchen is a mobile apps for ordering food",
@@ -91,12 +91,18 @@ const services = [
             "Designing apps that look and perform equally well on Android and iOS.",
         icon: MonitorSmartphone,
     },
-    // {
-    //     service: "UX Design",
-    //     description:
-    //         "Building intuitive, user-centric designs that drive engagement and conversion.",
-    //     icon: Frame,
-    // },
+    {
+        service: "UX Design",
+        description:
+            "Building intuitive, user-centric designs that drive engagement and conversion.",
+        icon: Frame,
+    },
+    {
+        service: "UX Research",
+        description:
+            "Research the best practice design for the user experience",
+        icon: Eye,
+    },
     // {
     //     service: "Backend Development",
     //     description:
@@ -123,7 +129,6 @@ const experiences = [
         description:
             "Development mobile apps who named Padat Karya Mangrove, this app is monitoring mangrove in Indonesia. I'm responsible for developing the app from scratch to production",
     },
-
     {
         companyName: "SWUSHD Ltd",
         jobType: "Freelance",
@@ -131,6 +136,30 @@ const experiences = [
         duration: "Mar - July 2023",
         description:
             "Fix and solve bugs on the SWUSHD Kitchen app, implement Github Action for CI/CD, also integrated the apps ith Stipe for payment gateway",
+    },
+    {
+        companyName: "Axar School",
+        jobType: "Full-time",
+        jobTitle: "Research and Development",
+        duration: "Nov 2020 - Nov 2021",
+        description:
+            "Reseach and analyst an IoT and Mobile Apps (flutter) modul, and develop the modul for the student",
+    },
+    {
+        companyName: "Diponegoro University",
+        jobType: "Part-time",
+        jobTitle: "IT Engineer (SEO)",
+        duration: "May - Dec 2020",
+        description:
+            "Optimize the website for SEO, develop the website for the university, and help standarize the website for the university",
+    },
+    {
+        companyName: "Gets id",
+        jobType: "Part-time",
+        jobTitle: "UX Researcher",
+        duration: "Jul - Dec 2020",
+        description:
+            "Research and identify to Improve a UI/UX in the Application, Created a Social Media Content, Created a Win-Win Solution to Business Partner and Researching Competitors.",
     },
 ];
 
