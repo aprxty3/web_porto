@@ -47,17 +47,17 @@ const projects = [
         href: "https://callink.id/",
     },
     {
+        title: "Checkervisor",
+        description: "Checkervisor is app for check original product",
+        image: "/assets/checkvisor.png",
+        href: "https://play.google.com/store/apps/details?id=com.checkervisor.app",
+    },
+    {
         title: "Padat Karya Mangrove",
         description: "Padat Karya Mangrove is app for monitoring mangrove",
         image: "/assets/pkm.png",
         href: "https://www.karomap.com/",
     },
-    // {
-    //     title: "Checkervisor",
-    //     description: "Checkervisor is app for check original product",
-    //     image: "/assets/checkvisor.png",
-    //     href: "https://www.instagram.com/checkervisor/",
-    // },
     {
         title: "SWUSHD Kitchen",
         description: "SWUSHD Kitchen is a mobile apps for ordering food",
@@ -256,6 +256,7 @@ export default function Home() {
                         >
                             <span className={styles.pill}>Flutter</span>
                             <span className={styles.pill}>Kotlin</span>
+                            <span className={styles.pill}>Swift</span>
                             <span className={styles.pill}>C++ (IoT)</span>
                             <span className={styles.pill}>Firebase</span>
                             <span className={styles.pill}>Supabase</span>
@@ -351,13 +352,13 @@ export default function Home() {
                             >
                                 Kotlin
                             </Link>{" "}
-                            since 2021 and want Expand on{" "} <Link
+                            since 2021 and on{" "} <Link
                             href="https://www.swift.org/"
                             target="_blank"
                             className="underline"
                         >
                             Swift
-                        </Link>{""}
+                        </Link>{""} since 2023
                             . My experience spans from startups to mid-sized
                             companies, where I&apos;ve been instrumental in the entire product
                             design process; from ideation and wireframing, through
