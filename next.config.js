@@ -20,6 +20,7 @@ const withPWA = WithPWA({
 const config = withPWA({
     output: "export",
     reactStrictMode: true,
+    port:process.env.PORT
 
     /**
      * If you are using `appDir` then you must comment the below `i18n` config out.
