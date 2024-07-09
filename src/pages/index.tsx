@@ -8,6 +8,7 @@ import {
     Frame,
     Eye,
     MonitorSmartphone,
+    Gamepad2, Gamepad2Icon,
 } from "lucide-react";
 import {TriangleDownIcon} from "@radix-ui/react-icons";
 import Spline from "@splinetool/react-spline";
@@ -19,8 +20,6 @@ import {
     Carousel,
     CarouselContent,
     CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
     type CarouselApi,
 } from "@/components/ui/carousel";
 import VanillaTilt from "vanilla-tilt";
@@ -28,6 +27,12 @@ import {motion} from "framer-motion";
 
 
 const projects = [
+    {
+        title: "Knight Coin",
+        description: "Knight Coin",
+        image: "/assets/knight_coin.png",
+        href: "https://github.com/aprxty3/first_game",
+    },
     {
         title: "Ai Care Partner",
         description: "Ai Care for Partners",
@@ -103,12 +108,12 @@ const services = [
             "Research the best practice design for the user experience",
         icon: Eye,
     },
-    // {
-    //     service: "Backend Development",
-    //     description:
-    //         "Developing robust, scalable server-side logic for a wide range of applications.",
-    //     icon: Eye,
-    // },
+    {
+        service: "Godot Development",
+        description:
+            "Developing 2D Game for PC/Mobile with Godot Game Engine",
+        icon: Gamepad2,
+    },
 ];
 
 const experiences = [
@@ -260,6 +265,7 @@ export default function Home() {
                             <span className={styles.pill}>C++ (IoT)</span>
                             <span className={styles.pill}>Firebase</span>
                             <span className={styles.pill}>Supabase</span>
+                            <span className={styles.pill}>Godot</span>
                         </div>
                         <div>
                             <h1
@@ -358,8 +364,11 @@ export default function Home() {
                             className="underline"
                         >
                             Swift
-                        </Link>{""} since 2023
-                            . My experience spans from startups to mid-sized
+                        </Link>{""} since 2023, then currently i learn{" "} <Link
+                            href="https://godotengine.org/"
+                            target="_blank"
+                            className="underline"
+                        >Godot Game Engine</Link> to create Game. My experience spans from startups to mid-sized
                             companies, where I&apos;ve been instrumental in the entire product
                             design process; from ideation and wireframing, through
                             prototyping, to the delivery of the final product, all while
@@ -457,17 +466,15 @@ export default function Home() {
                             Streamlined digital experiences.
                         </h2>
                         <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
-                            I&apos;ve worked on a variety of projects, from small to
-                            large-scale mobile applications. Here are some of my projects:
+                            I&apos;ve worked on a variety of projects. Here are some of my projects:
                         </p>
 
-                        {/* Carousel */}
                         <div className="mt-14">
                             <Carousel setApi={setCarouselApi} className="w-full">
-                                <CarouselContent>
+                                <CarouselContent className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                                     {projects.map((project) => (
-                                        <CarouselItem key={project.title} className="md:basis-1/2">
-                                            <Card id="tilt">
+                                        <CarouselItem key={project.title} className="flex justify-center">
+                                            <Card id="tilt" className="w-full max-w-xs h-auto">
                                                 <CardHeader className="p-0">
                                                     <Link href={project.href} target="_blank" passHref>
                                                         {project.image.endsWith(".webm") ? (
@@ -476,7 +483,7 @@ export default function Home() {
                                                                 autoPlay
                                                                 loop
                                                                 muted
-                                                                className="aspect-video h-full w-full rounded-t-md bg-primary object-cover"
+                                                                className="aspect-video w-full h-auto rounded-t-md bg-primary object-cover"
                                                             />
                                                         ) : (
                                                             <Image
@@ -485,13 +492,12 @@ export default function Home() {
                                                                 width={600}
                                                                 height={300}
                                                                 quality={100}
-                                                                className="aspect-video h-full w-full rounded-t-md bg-primary object-cover"
+                                                                className="aspect-video w-full h-auto rounded-t-md bg-primary object-cover"
                                                             />
                                                         )}
                                                     </Link>
                                                 </CardHeader>
-                                                <CardContent
-                                                    className="absolute bottom-0 w-full bg-background/50 backdrop-blur">
+                                                <CardContent className="flex items-center">
                                                     <CardTitle
                                                         className="border-t border-white/5 p-4 text-base font-normal tracking-tighter">
                                                         {project.description}
@@ -501,15 +507,7 @@ export default function Home() {
                                         </CarouselItem>
                                     ))}
                                 </CarouselContent>
-                                <CarouselPrevious/>
-                                <CarouselNext/>
                             </Carousel>
-                            <div className="py-2 text-center text-sm text-muted-foreground">
-                <span className="font-semibold">
-                  {current} / {count}
-                </span>{" "}
-                                projects
-                            </div>
                         </div>
                     </div>
                 </section>
