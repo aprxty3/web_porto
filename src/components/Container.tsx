@@ -41,6 +41,7 @@ const navLinks = [
     {href: "#about", text: "About"},
     {href: "#experiences", text: "Experiences"},
     {href: "#projects", text: "Projects"},
+    {href: "#games", text: "Games"},
     {href: "#services", text: "Services"},
 ];
 
