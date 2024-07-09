@@ -8,6 +8,7 @@ import {
     Frame,
     Eye,
     MonitorSmartphone,
+    Gamepad2,
 } from "lucide-react";
 import {TriangleDownIcon} from "@radix-ui/react-icons";
 import Spline from "@splinetool/react-spline";
@@ -19,8 +20,6 @@ import {
     Carousel,
     CarouselContent,
     CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
     type CarouselApi,
 } from "@/components/ui/carousel";
 import VanillaTilt from "vanilla-tilt";
@@ -28,6 +27,7 @@ import {motion} from "framer-motion";
 
 
 const projects = [
+
     {
         title: "Ai Care Partner",
         description: "Ai Care for Partners",
@@ -45,6 +45,11 @@ const projects = [
         description: "Callink chat apps",
         image: "/assets/callink.png",
         href: "https://callink.id/",
+    }, {
+        title: "Knight Coin",
+        description: "Knight Coin",
+        image: "/assets/knight_coin.png",
+        href: "https://github.com/aprxty3/first_game",
     },
     {
         title: "Checkervisor",
@@ -103,12 +108,12 @@ const services = [
             "Research the best practice design for the user experience",
         icon: Eye,
     },
-    // {
-    //     service: "Backend Development",
-    //     description:
-    //         "Developing robust, scalable server-side logic for a wide range of applications.",
-    //     icon: Eye,
-    // },
+    {
+        service: "Godot Development",
+        description:
+            "Developing 2D Game for PC/Mobile with Godot Game Engine",
+        icon: Gamepad2,
+    },
 ];
 
 const experiences = [
@@ -161,6 +166,10 @@ const experiences = [
         description:
             "Research and identify to Improve a UI/UX in the Application, Created a Social Media Content, Created a Win-Win Solution to Business Partner and Researching Competitors.",
     },
+];
+
+const gameProject = [
+    {title: "Knight Coin", image: "/assets/knight_coin.png", href: "https://aprxty3.itch.io/knight-coin",},
 ];
 
 export default function Home() {
@@ -260,6 +269,7 @@ export default function Home() {
                             <span className={styles.pill}>C++ (IoT)</span>
                             <span className={styles.pill}>Firebase</span>
                             <span className={styles.pill}>Supabase</span>
+                            <span className={styles.pill}>Godot</span>
                         </div>
                         <div>
                             <h1
@@ -358,8 +368,11 @@ export default function Home() {
                             className="underline"
                         >
                             Swift
-                        </Link>{""} since 2023
-                            . My experience spans from startups to mid-sized
+                        </Link>{""} since 2023, then currently i learn{" "} <Link
+                            href="https://godotengine.org/"
+                            target="_blank"
+                            className="underline"
+                        >Godot Game Engine</Link> to create Game. My experience spans from startups to mid-sized
                             companies, where I&apos;ve been instrumental in the entire product
                             design process; from ideation and wireframing, through
                             prototyping, to the delivery of the final product, all while
@@ -434,7 +447,6 @@ export default function Home() {
 
                 {/* Projects */}
                 <section id="projects" data-scroll-section>
-                    {/* Gradient */}
                     <div className="relative isolate -z-10">
                         <div
                             className="absolute inset-x-0 -top-40 transform-gpu overflow-hidden blur-[100px] sm:-top-80 lg:-top-60"
@@ -457,17 +469,15 @@ export default function Home() {
                             Streamlined digital experiences.
                         </h2>
                         <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
-                            I&apos;ve worked on a variety of projects, from small to
-                            large-scale mobile applications. Here are some of my projects:
+                            I&apos;ve worked on a variety of projects. Here are some of my projects:
                         </p>
 
-                        {/* Carousel */}
                         <div className="mt-14">
                             <Carousel setApi={setCarouselApi} className="w-full">
-                                <CarouselContent>
+                                <CarouselContent className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                                     {projects.map((project) => (
-                                        <CarouselItem key={project.title} className="md:basis-1/2">
-                                            <Card id="tilt">
+                                        <CarouselItem key={project.title} className="flex justify-center">
+                                            <Card id="tilt" className="w-full max-w-xs h-auto">
                                                 <CardHeader className="p-0">
                                                     <Link href={project.href} target="_blank" passHref>
                                                         {project.image.endsWith(".webm") ? (
@@ -476,7 +486,7 @@ export default function Home() {
                                                                 autoPlay
                                                                 loop
                                                                 muted
-                                                                className="aspect-video h-full w-full rounded-t-md bg-primary object-cover"
+                                                                className="aspect-video w-full h-auto rounded-t-md bg-primary object-cover"
                                                             />
                                                         ) : (
                                                             <Image
@@ -485,13 +495,12 @@ export default function Home() {
                                                                 width={600}
                                                                 height={300}
                                                                 quality={100}
-                                                                className="aspect-video h-full w-full rounded-t-md bg-primary object-cover"
+                                                                className="aspect-video w-full h-auto rounded-t-md bg-primary object-cover"
                                                             />
                                                         )}
                                                     </Link>
                                                 </CardHeader>
-                                                <CardContent
-                                                    className="absolute bottom-0 w-full bg-background/50 backdrop-blur">
+                                                <CardContent className="flex items-center">
                                                     <CardTitle
                                                         className="border-t border-white/5 p-4 text-base font-normal tracking-tighter">
                                                         {project.description}
@@ -501,20 +510,63 @@ export default function Home() {
                                         </CarouselItem>
                                     ))}
                                 </CarouselContent>
-                                <CarouselPrevious/>
-                                <CarouselNext/>
                             </Carousel>
-                            <div className="py-2 text-center text-sm text-muted-foreground">
-                <span className="font-semibold">
-                  {current} / {count}
-                </span>{" "}
-                                projects
-                            </div>
                         </div>
                     </div>
                 </section>
 
-                {/* Services */}
+                {/* Game Projects */}
+                <section id="games" data-scroll-section>
+                    {/* Gradient */}
+                    <div className="relative isolate -z-10">
+                        <div
+                            className="absolute inset-x-0 -top-40 transform-gpu overflow-hidden blur-[100px] sm:-top-80 lg:-top-60"
+                            aria-hidden="true"
+                        >
+                            <div
+                                className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-primary via-primary to-secondary opacity-10 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+                                style={{
+                                    clipPath:
+                                        "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+                                }}
+                            />
+                        </div>
+                    </div>
+                    <div data-scroll data-scroll-speed=".4" className="my-64">
+            <span className="text-gradient clash-grotesk text-sm font-semibold tracking-tighter">
+              ✨ Games Project
+            </span>
+                        <h2 className="mt-3 text-4xl font-semibold tracking-tight tracking-tighter xl:text-6xl">
+                            A Games who created for fun.
+                        </h2>
+                        <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
+                            this games project i created for fun and learn new things about a game development:
+                        </p>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+                            {gameProject.map((game, index) => (
+                                <a
+                                    key={index}
+                                    href={game.href}
+                                    className="group block relative overflow-hidden rounded-lg shadow-lg transition transform hover:scale-105"
+                                >
+                                    <img
+                                        src={game.image}
+                                        alt={game.title}
+                                        className="w-full h-48 object-cover"
+                                    />
+                                    <div
+                                        className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                        <h3 className="text-white text-lg font-semibold">{game.title}</h3>
+                                    </div>
+                                </a>
+                            ))}
+                        </div>
+
+                    </div>
+                </section>
+
+                {/* Services */
+                }
                 <section id="services" data-scroll-section>
                     <div
                         data-scroll
@@ -580,11 +632,12 @@ export default function Home() {
                             discussing new projects.
                         </p>
                         <div className="flex">
-                            <Link href="mailto:d.ajiprasetyo43@gmail.com" passHref>
-                                <Button className="mt-6">
-                                    <Image src='/assets/mail.svg' alt="Mail" width={20} height={20}/>
-                                </Button>
-                            </Link>
+
+
+                            <Button className="mt-6 ml-4"
+                                    onClick={() => window.open('mailto:d.ajiprasetyo43@gmail.com', '_blank')}>
+                                <Image src='/assets/mail.svg' alt="Mail" width={20} height={20}/>
+                            </Button>
 
                             <Button className="mt-6 ml-4"
                                     onClick={() => window.open('https://t.me/Aprxty', '_blank')}>
@@ -599,6 +652,11 @@ export default function Home() {
                             <Button className="mt-6 ml-4"
                                     onClick={() => window.open('https://github.com/aprxty3', '_blank')}>
                                 <Image src='/assets/github.svg' alt="Github" width={20} height={20}/>
+                            </Button>
+
+                            <Button className="mt-6 ml-4"
+                                    onClick={() => window.open('https://aprxty3.itch.io/', '_blank')}>
+                                <Image src='/assets/itch.svg' alt="itch.io" width={22} height={22}/>
                             </Button>
 
 
