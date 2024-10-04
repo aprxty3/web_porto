@@ -45,7 +45,14 @@ const projects = [
         description: "Callink chat apps",
         image: "/assets/callink.png",
         href: "https://callink.id/",
-    }, {
+    },
+    {
+        title: "QR Code Menu Resto Scanner",
+        description: "QR Code Menu Resto Scanner",
+        image: "/assets/qr-resto-menu.png",
+        href: "https://qr-resto-menu.vercel.app/",
+    }, 
+    {
         title: "Knight Coin",
         description: "Knight Coin",
         image: "/assets/knight_coin.png",
@@ -265,11 +272,11 @@ export default function Home() {
                         >
                             <span className={styles.pill}>Flutter</span>
                             <span className={styles.pill}>Kotlin</span>
-                            <span className={styles.pill}>Swift</span>
+                            {/* <span className={styles.pill}>Swift</span> */}
                             <span className={styles.pill}>C++ (IoT)</span>
                             <span className={styles.pill}>Firebase</span>
                             <span className={styles.pill}>Supabase</span>
-                            <span className={styles.pill}>Godot</span>
+                            {/* <span className={styles.pill}>Godot</span> */}
                         </div>
                         <div>
                             <h1
@@ -362,7 +369,8 @@ export default function Home() {
                             >
                                 Kotlin
                             </Link>{" "}
-                            since 2021 and on{" "} <Link
+                            since 2021 and on{" "} 
+                            <Link
                             href="https://www.swift.org/"
                             target="_blank"
                             className="underline"
