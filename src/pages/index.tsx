@@ -134,6 +134,14 @@ const experiences = [
 
     },
     {
+        companyName: "PT Maju Berkah Adikarya",
+        jobType: "Freelance",
+        jobTitle: "Flutter Developer",
+        duration: "Oct 2024 - Dec 2024",
+        description:
+            "Development mobile apps who named Juber Super Apps, this app are PPOB Apps. I'm responsible for developing the app from scratch to production",
+    },
+    {
         companyName: "CV. Karomap Semesta",
         jobType: "Freelance",
         jobTitle: "Flutter Developer",
@@ -361,22 +369,25 @@ export default function Home() {
                             >
                                 Flutter
                             </Link>{" "}
-                            and {" "}
+                            {/* and {" "}
                             <Link
                                 href="https://kotlinlang.org/"
                                 target="_blank"
                                 className="underline"
                             >
                                 Kotlin
-                            </Link>{" "}
-                            since 2021 and on{" "} 
+                            </Link>{" "} */}
+                            since 2021 
+                            {/* and on{" "} 
                             <Link
                             href="https://www.swift.org/"
                             target="_blank"
                             className="underline"
                         >
                             Swift
-                        </Link>{""} since 2023, then currently i learn{" "} <Link
+                        </Link>{""} since 2023 */}
+                        , then currently i learn{" "}<Link href="https://hapi.dev/"target="_blank"
+                            className="underline"> Hapi Js</Link> for BackEnd and {" "} <Link
                             href="https://godotengine.org/"
                             target="_blank"
                             className="underline"
